@@ -15,19 +15,19 @@ const App = () => {
     console.log(data)
     setIssues(data)
   }
-
+// BARRA DE BUSQUEDA, FUNCION DE COMPARAR
   const handleSearch = (event) => {
     setSearchTerm(event.target.value)
   }
-
+//IMPRIME LA COMPARACION CON RESPECTO LA INFORMACIÓN
   const filteredData = issues.filter((issue) => {
     return issue.title.toLowerCase().includes(searchTerm.toLowerCase())
   })
-
+//MUESTRA INFORMACION
   useEffect(() => {
     showData()
   }, [])
-
+//FUNCION PARA REDIRECCIONAR AL MOMENTO DE HACER ONCLICK EN EL TITULO
   const handleTitleClick = (issue) => {
     window.open(issue.html_url, '_blank')
   }
@@ -38,13 +38,18 @@ const App = () => {
       selector: 'id'
     },
     {
+      name: 'TITULO',
+      selector: 'title',
+      cell: (row) => <span onClick={() => handleTitleClick(row)}>{row.title}</span>
+    },
+    {
       name: 'NAME',
       selector: 'user.login'
     },
     {
-      name: 'TITULO',
-      selector: 'title',
-      cell: (row) => <span onClick={() => handleTitleClick(row)}>{row.title}</span>
+      name: 'LABELS',
+      selector: 'labels',
+      cell: (row) => row.labels.map((label) => label.name).join(', ')
     }
   ]
 
