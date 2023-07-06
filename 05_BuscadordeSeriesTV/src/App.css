@@ -1,0 +1,36 @@
+
+  .Img-Poster{
+    width: 50%;
+    height: 20%;
+    size: 10%
+  }
+.Titulo{
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    color: brown;
+}
+  
+  .card--body{
+    font-size: 18px;
+    color: black;
+  }
+  
+  .card--footer{
+    color: gray;
+    text-align: center;
+  }
+
+  .card-text{
+
+  }
+  .bd-placeholder-img card-img-top{
+    width: 100%;
+     height:225
+  }
+  .card shadow-sm{
+
+  }
+  .col{
+    border-radius: 15%;
+    border-color: black;
+  }
