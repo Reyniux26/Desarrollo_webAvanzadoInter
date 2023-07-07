@@ -44,8 +44,9 @@
   border-radius: 3%;
   list-style: none;
   border: 2px solid rgb(25, 25, 30);
-  padding: .5em;
+  padding: 2%;
   margin: 3%;
+  background-color: rgb(224, 236, 220);
 }
 .search-bar {
   margin: 40px;

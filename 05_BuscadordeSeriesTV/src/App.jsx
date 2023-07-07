@@ -5,6 +5,7 @@ import SearchBar from './Components/SearchBar'
 
 const App = () => {
   const [pelis, setPelis] = useState([])
+  const [searchTerm, setSearchTerm] = useState('')
   // const [searchTerm, setSearchTerm] = useState('')
   // const URL = 'https://www.tvmaze.com/api'
 
@@ -20,14 +21,21 @@ const App = () => {
       })
   }, [])
 
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value)
+  }
+  const filteredData = pelis.filter((item) => {
+    return item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  })
+
   return (
 
     <div>
-      <SearchBar />
+      <SearchBar handleSearchChange={handleSearch} />
       <div>
 
         {
-            pelis.map((peli) => (
+            filteredData.map((peli) => (
               <Poster
                 key={peli.id}
                 name={peli.name}
