@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Poster from './Components/Poster'
 import './App.css'
+import SearchBar from './Components/SearchBar'
 
 const App = () => {
   const [pelis, setPelis] = useState([])
@@ -22,6 +23,7 @@ const App = () => {
   return (
 
     <div>
+      <SearchBar />
       <div>
 
         {

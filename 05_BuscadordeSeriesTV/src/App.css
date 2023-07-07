@@ -1,13 +1,17 @@
-
+.body{
+  background-color: bisque;
+  margin: 200%;
+  padding: 500%;
+}
   .Img-Poster{
     width: 50%;
     height: 20%;
-    size: 10%
+   
   }
 .Titulo{
     font-style: normal;
-    font-family: 'Times New Roman', Times, serif;
-    color: brown;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(165, 42, 42);
 }
   
   .card--body{
@@ -21,7 +25,7 @@
   }
 
   .card-text{
-
+    display: flex;
   }
   .bd-placeholder-img card-img-top{
     width: 100%;
@@ -33,4 +37,24 @@
   .col{
     border-radius: 15%;
     border-color: black;
+    display: flex;
+    list-style: none;
   }
+.card{
+  border-radius: 3%;
+  list-style: none;
+  border: 2px solid rgb(25, 25, 30);
+  padding: .5em;
+  margin: 3%;
+}
+.search-bar {
+  margin: 40px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
