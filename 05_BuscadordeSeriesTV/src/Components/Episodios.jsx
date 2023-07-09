@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const Episodios = (id, url, name) => {
+const Episodios = (id) => {
   const URL = `https://api.tvmaze.com/shows/${id}/episodes`
   const [episodios, setEpisodios] = useState([])
   useEffect(() => {
@@ -22,9 +22,10 @@ const Episodios = (id, url, name) => {
         <div className='col-md-6'>
           {episodios.map((epi) => (
             <div className='col' key={epi.id}>
+              <h1>{epi.season}</h1>
               <div className='h-100 p-5 bg-body-tertiary border rounded-3'>
                 <img
-                  src={epi.image.original}
+                  src={epi.image.original} height='200' width='300'
                   alt={epi.name}
                   className='card-img-top poster-image'
                 />
