@@ -4,7 +4,7 @@ const Episodios = (id) => {
   const URL = `https://api.tvmaze.com/shows/${id}/episodes`
   const [episodios, setEpisodios] = useState([])
   useEffect(() => {
-    fetch('https://api.tvmaze.com/shows')
+    fetch(`https://api.tvmaze.com/shows/${id}/episodes`)
       .then((response) => response.json())
       .then((results) => {
         console.log(results)
@@ -18,7 +18,6 @@ const Episodios = (id) => {
   return (
     <div>Episodios
       <main>
-        <a href={URL}>Hola</a>
         <div className='col-md-6'>
           {episodios.map((epi) => (
             <div className='col' key={epi.id}>

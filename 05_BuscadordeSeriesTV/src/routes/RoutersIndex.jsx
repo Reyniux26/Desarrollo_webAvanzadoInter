@@ -6,8 +6,8 @@ import App from '../App'
 const RoutesIndex = () => {
   return (
     <Routes>
-      <Route path='/App:id' element={<App />} />
-      <Route path='/show' element={<Episodios />} />
+      <Route path='/' element={<App />} />
+      <Route path='/Episodios/:id' element={<Episodios />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   )
