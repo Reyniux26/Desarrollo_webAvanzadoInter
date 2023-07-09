@@ -1,13 +1,12 @@
+import { BrowserRouter } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './App.css'
 import SearchBar from './Components/SearchBar'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import pages from './Components/Movie'
-
+import RoutesIndex from './routes/RoutesIndex'
 const App = () => {
   const [pelis, setPelis] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
-  const URL = 'https://www.google.com/'
 
   useEffect(() => {
     fetch('https://api.tvmaze.com/shows')
@@ -75,6 +74,11 @@ const App = () => {
           <p className='float-end mb-1' />
         </div>
       </footer>
+      <>
+        <BrowserRouter>
+          <RoutesIndex />
+        </BrowserRouter>
+      </>
     </div>
   )
 }

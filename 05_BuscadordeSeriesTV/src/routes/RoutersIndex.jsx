@@ -1,13 +1,14 @@
 import { Route, Routes } from 'react-router-dom'
-import Pelicula from '../Pages/About'
 import Actores from '../pages/Actores'
 import NotFound from '../Pages/NotFound'
+import Episodios from '../Components/Episodios'
+import Movie from '../Components/Movie'
 
 const RoutesIndex = () => {
   return (
     <Routes>
-      <Route path='/pelicula' element={<Pelicula />} />
-      <Route path='/Actores' element={<Actores />} />
+      <Route path='/pelicula' element={<Episodios />} />
+      <Route path='/Actores' element={<Movie />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   )
