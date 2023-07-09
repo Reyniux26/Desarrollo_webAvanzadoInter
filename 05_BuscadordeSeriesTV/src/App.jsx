@@ -33,7 +33,6 @@ const App = () => {
 
     <div>
       <BrowserRouter>
-        <Episodios />
         <RoutesIndex />
         <header>
           <div className='navbar navbar-dark bg-dark shadow-sm'>
@@ -52,7 +51,7 @@ const App = () => {
               <div className='row row-cols-1 row-cols-md-4 g-4 align-items-stretch'>
                 {filteredData.map((peli) => (
                   <div className='col' key={peli.id}>
-                    <a href={`https://api.tvmaze.com/shows/${peli.id}/episodes`} className='card custom-card'>
+                    <a href={} className='card custom-card'>
                       <div className='d-flex align-items-center'>
                         <img
                           src={peli.image.original}

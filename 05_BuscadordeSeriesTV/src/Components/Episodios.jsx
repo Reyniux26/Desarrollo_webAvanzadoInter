@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
 const Episodios = (id) => {
-  const URL = `https://api.tvmaze.com/shows/${id}/episodes`
   const [episodios, setEpisodios] = useState([])
   useEffect(() => {
     fetch(`https://api.tvmaze.com/shows/${id}/episodes`)
