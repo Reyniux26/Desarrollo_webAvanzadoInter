@@ -3,11 +3,11 @@ import NotFound from '../Pages/NotFound'
 import Episodios from '../Components/Episodios'
 import App from '../App'
 
-const RoutesIndex = () => {
+const RoutesIndex = (id) => {
   return (
     <Routes>
-      <Route path='/' element={<App />} />
-      <Route path='/Episodios/:id' element={<Episodios />} />
+      <Route path='http://localhost:5173/' element={<App />} />
+      <Route path={`/Serie/${id}`} element={<Episodios />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   )

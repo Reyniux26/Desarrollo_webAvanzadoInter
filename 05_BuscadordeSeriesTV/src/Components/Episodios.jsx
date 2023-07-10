@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
-const Episodios = (id) => {
+const Episodios = ({ id }) => {
+  const URL = `https://api.tvmaze.com/shows/${id}/episodes`
   const [episodios, setEpisodios] = useState([])
   useEffect(() => {
-    fetch(`https://api.tvmaze.com/shows/${id}/episodes`)
+    fetch(URL)
       .then((response) => response.json())
       .then((results) => {
         console.log(results)
@@ -12,11 +13,12 @@ const Episodios = (id) => {
       .catch((error) => {
         console.error(error)
       })
-  }, [])
+  }, [id])
 
   return (
-    <div>Episodios
+    <div>
       <main>
+        <a>Hola</a>
         <div className='col-md-6'>
           {episodios.map((epi) => (
             <div className='col' key={epi.id}>
