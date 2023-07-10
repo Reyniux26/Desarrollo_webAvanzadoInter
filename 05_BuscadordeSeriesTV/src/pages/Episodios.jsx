@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import Actores from './Actores'
+
+// file cap courrt
 
 const Episodios = () => {
   const { id } = useParams()
@@ -22,13 +25,14 @@ const Episodios = () => {
   return (
     <div>
       <main>
-        <div className='col-md-6'>
+        <div className='row row-cols-1 row-cols-md-4 g-4 align-items-stretch'>
           {episodios.map((epi) => (
             <div className='col' key={epi.id}>
-              <h2> {epi.season}</h2>
+
               <div className='h-100 p-5 bg-body-tertiary border rounded-3'>
+                <h2 className='Titulo'> Temp {epi.season}/ ep:{epi.id}</h2>
                 <img
-                  src={epi.image.original} height='200' width='300'
+                  src={epi.image.original} height='300' width='150'
                   alt={epi.name}
                   className='card-img-top poster-image'
                 />
@@ -39,6 +43,11 @@ const Episodios = () => {
           ))}
         </div>
       </main>
+      <div />
+      <h1>CAST</h1>
+      <div className='row row-cols-1 row-cols-md-4 g-4 align-items-stretch'>
+        <Actores />
+      </div>
     </div>
 
   )

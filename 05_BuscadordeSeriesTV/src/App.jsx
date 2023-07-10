@@ -31,7 +31,6 @@ const App = () => {
   return (
 
     <div>
-
       <header>
         <div className='navbar navbar-dark bg-dark shadow-sm'>
           <div className='container'>
@@ -52,7 +51,7 @@ const App = () => {
                   <a href={`/Serie/${peli.id}`} className='card custom-card'>
                     <div className='d-flex align-items-center'>
                       <img
-                        src={peli.image.original}
+                        src={peli?.image?.original}
                         alt={peli.name}
                         className='card-img-top poster-image'
                       />
