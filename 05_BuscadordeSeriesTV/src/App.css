@@ -1,18 +1,32 @@
-.body{
-  background-color: bisque;
-  margin: 200%;
-  padding: 500%;
+.header{
+  background-color: rgb(167, 163, 157);
+  font-size:xx-large;
+  font-family: fantasy;
 }
   .Img-Poster{
     width: 50%;
     height: 20%;
    
   }
-.Titulo{
+  .nombre{
+    text-align: left; 
+    font-family: Arial Black; 
+    font-weight: bold; 
+    font-size: 30px; 
+    color: #fff; 
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  }
+.titulo{
     font-style: normal;
     font-family:fantasy;
     align-items: center;
     color: rgb(165, 42, 42);
+}
+.titulo2{
+  font-style: normal;
+  font-family: fantasy;
+  align-items: center;
+  color: rgb(24, 15, 31);
 }
   
   .card--body{

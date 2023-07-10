@@ -3,6 +3,7 @@ import './App.css'
 import SearchBar from './Components/SearchBar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Episodios from './pages/Episodios'
+import { NavLink } from 'react-router-dom'
 
 const App = () => {
   const [pelis, setPelis] = useState([])
@@ -34,9 +35,9 @@ const App = () => {
       <header>
         <div className='navbar navbar-dark bg-dark shadow-sm'>
           <div className='container'>
-            <a href='#' className='navbar-brand d-flex align-items-center'>
+            <NavLink to='#' className='navbar-brand d-flex align-items-center'>
               <strong>My Movie App</strong>
-            </a>
+            </NavLink>
             <SearchBar handleSearchChange={handleSearch} />
           </div>
         </div>
@@ -46,8 +47,9 @@ const App = () => {
         <div className='album py-5 bg-light'>
           <div className='container'>
             <div className='row row-cols-1 row-cols-md-4 g-4 align-items-stretch'>
+
               {filteredData.map((peli) => (
-                <div className='col' key={peli.id} href={<Episodios id={peli.id} />}>
+                <NavLink className='col' key={peli.id} to={<Episodios id={peli.id} {...peli} />}>
                   <a href={`/Serie/${peli.id}`} className='card custom-card'>
                     <div className='d-flex align-items-center'>
                       <img
@@ -55,7 +57,6 @@ const App = () => {
                         alt={peli.name}
                         className='card-img-top poster-image'
                       />
-
                     </div>
                     <div className='card-body'>
                       <p className='card-text'>{peli.name}</p>
@@ -64,7 +65,7 @@ const App = () => {
                       </div>
                     </div>
                   </a>
-                </div>
+                </NavLink>
               ))}
             </div>
           </div>
