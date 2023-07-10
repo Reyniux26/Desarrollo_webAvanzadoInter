@@ -23,7 +23,7 @@ const Episodios = () => {
 
   return (
     <div>
-      <h1>Serie {id}</h1>
+      <h1 className='header'>Serie {id}</h1>
       <div />
       <main>
         <div className='row row-cols-1 row-cols-md-4 g-4 align-items-stretch'>
@@ -39,7 +39,7 @@ const Episodios = () => {
                   className='card-img-top poster-image'
                 />
                 <h2>{epi.name}</h2>
-                <p>{epi.summary}</p>
+                <div dangerouslySetInnerHTML={{ __html: epi.summary }} />
               </div>
             </div>
 

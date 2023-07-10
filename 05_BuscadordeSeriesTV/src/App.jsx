@@ -49,7 +49,8 @@ const App = () => {
             <div className='row row-cols-1 row-cols-md-4 g-4 align-items-stretch'>
 
               {filteredData.map((peli) => (
-                <NavLink className='col' key={peli.id} to={<Episodios id={peli.id} {...peli} />}>
+                <NavLink className='col' key={peli.id}>
+                  <Episodios id={peli.id} name={peli.name} language={peli.language} />
                   <a href={`/Serie/${peli.id}`} className='card custom-card'>
                     <div className='d-flex align-items-center'>
                       <img
