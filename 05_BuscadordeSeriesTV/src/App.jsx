@@ -4,7 +4,7 @@ import './App.css'
 import SearchBar from './Components/SearchBar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import RoutesIndex from './routes/RoutersIndex'
-import Episodios from './Components/Episodios'
+import Episodios from './pages/Episodios'
 const App = () => {
   const [pelis, setPelis] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
