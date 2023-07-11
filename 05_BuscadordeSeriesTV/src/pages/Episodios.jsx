@@ -31,7 +31,7 @@ const Episodios = () => {
             <div className='col' key={epi.id}>
 
               <div className='h-100 p-5 bg-body-tertiary border rounded-3'>
-                <h2 className='titulo'> Temp {epi.season}/</h2>
+                <h2 className='titulo'> T {epi.season}</h2>
                 <h2 className='titulo2'> ep:{epi.id}</h2>
                 <img
                   src={epi.image.original} height='120' width='75'

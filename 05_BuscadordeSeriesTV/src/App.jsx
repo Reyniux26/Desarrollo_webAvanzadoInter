@@ -3,7 +3,6 @@ import './App.css'
 import SearchBar from './Components/SearchBar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Episodios from './pages/Episodios'
-import { NavLink } from 'react-router-dom'
 
 const App = () => {
   const [pelis, setPelis] = useState([])
@@ -35,9 +34,9 @@ const App = () => {
       <header>
         <div className='navbar navbar-dark bg-dark shadow-sm'>
           <div className='container'>
-            <NavLink to='#' className='navbar-brand d-flex align-items-center'>
+            <a href='#' className='navbar-brand d-flex align-items-center'>
               <strong>My Movie App</strong>
-            </NavLink>
+            </a>
             <SearchBar handleSearchChange={handleSearch} />
           </div>
         </div>
@@ -49,9 +48,9 @@ const App = () => {
             <div className='row row-cols-1 row-cols-md-4 g-4 align-items-stretch'>
 
               {filteredData.map((peli) => (
-                <NavLink className='col' key={peli.id}>
-                  <Episodios id={peli.id} name={peli.name} language={peli.language} />
-                  <a href={`/Serie/${peli.id}`} className='card custom-card'>
+                <a className='col' key={peli.id}>
+
+                  <a href={`/Serie/${peli.id}`} to={<Episodios id={peli.id} name={peli.name} language={peli.language} />} className='card custom-card'>
                     <div className='d-flex align-items-center'>
                       <img
                         src={peli?.image?.original}
@@ -66,7 +65,7 @@ const App = () => {
                       </div>
                     </div>
                   </a>
-                </NavLink>
+                </a>
               ))}
             </div>
           </div>
