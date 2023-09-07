@@ -83,19 +83,6 @@
   border-radius: 4px;
   border: 1px solid #ccc;
 }
-.button {
-   font-size: 20px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-   background-color: #555555;
-  color: white;
-  border-radius: 8px;
-}
-
-.button:hover {
-  background-color: #ced7cf; /* Green */
-  color: rgb(41, 38, 38);
-}
 .custom-card {
   transition: box-shadow 0.3s ease;
 }

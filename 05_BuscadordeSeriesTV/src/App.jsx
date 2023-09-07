@@ -29,7 +29,6 @@ const App = () => {
   })
 
   return (
-
     <div>
       <header>
         <div className='navbar navbar-dark bg-dark shadow-sm'>
@@ -41,15 +40,12 @@ const App = () => {
           </div>
         </div>
       </header>
-
       <main>
         <div className='album py-5 bg-light'>
           <div className='container'>
             <div className='row row-cols-1 row-cols-md-4 g-4 align-items-stretch'>
-
               {filteredData.map((peli) => (
                 <a className='col' key={peli.id}>
-
                   <a href={`/Serie/${peli.id}`} to={<Episodios id={peli.id} name={peli.name} language={peli.language} />} className='card custom-card'>
                     <div className='d-flex align-items-center'>
                       <img
@@ -71,13 +67,11 @@ const App = () => {
           </div>
         </div>
       </main>
-
       <footer className='text-muted py-5'>
         <div className='container'>
           <p className='float-end mb-1' />
         </div>
       </footer>
-
     </div>
   )
 }

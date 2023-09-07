@@ -29,7 +29,6 @@ const Episodios = () => {
         <div className='row row-cols-1 row-cols-md-4 g-4 align-items-stretch'>
           {episodios.map((epi) => (
             <div className='col' key={epi.id}>
-
               <div className='h-100 p-5 bg-body-tertiary border rounded-3'>
                 <h2 className='titulo'> T {epi.season}</h2>
                 <h2 className='titulo2'> ep:{epi.id}</h2>
@@ -42,7 +41,6 @@ const Episodios = () => {
                 <div dangerouslySetInnerHTML={{ __html: epi.summary }} />
               </div>
             </div>
-
           ))}
         </div>
       </main>
